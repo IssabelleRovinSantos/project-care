@@ -1,0 +1,77 @@
+﻿@model IEnumerable<ProjectCare01.Models.Order>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+<h1>Current Order</h1>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<body style="background-color: #f7f2ef">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #c4aca5;">
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="~/Home/Index">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="~/Order/Create">Create New Order</a>
+                <a class="nav-item nav-link" href="~/Order/Edit">Edit Order</a>
+            </div>
+        </div>
+    </nav>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.OrderName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Description)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Price)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DateAdded)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DateModified)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Type)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.OrderName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Price)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DateAdded)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DateModified)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Type)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.OrderID">Edit</a> |
+                        <a asp-action="Delete" asp-route-id="@item.OrderID"
+                           onclick='return confirm("Are you sure?");'>Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
