@@ -18,5 +18,7 @@ namespace ProjectCare01.Data
         public DbSet<Order>Orders { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
+
+        public DbSet<Concern> Concerns { get; set; }
     }
 }
