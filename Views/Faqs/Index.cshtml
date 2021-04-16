@@ -1,0 +1,116 @@
+﻿@{
+	ViewData["Title"] = "Index";
+}
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" a href="~/css/design.css" />
+	<style>
+
+		.accordion {
+			background-color: #CF6F77;
+			color: #000000;
+			cursor: pointer;
+			padding: 18px;
+			width: 100%;
+			border: none;
+			text-align: left;
+			outline: none;
+			font-size: 15px;
+			transition: 0.4s;
+		}
+
+			.accordion:hover {
+				background-color: #c4aca5;
+			}
+
+		.panel {
+			padding: 0 18px;
+			background-color: white;
+			max-height: 0;
+			overflow: hidden;
+			transition: max-height 0.2s ease-out;
+		}
+	</style>
+</head>
+<div class="jumbotron text-center" style=" background-color:#e1d6cf">
+	<img src="~/lib/image/logo.png" class="text-md-center" width="230" height="200" />
+	<h1 style="color:indianred; font-family:Georgia"> Frequently Asked Questions </h1>
+	<h3> <i> Project Care: To Care is To Share.</i> </h3>
+	<meta name="viewport" content="width=device-width" />
+</div>
+		<body style="background-color: #f7f2ef" >
+		<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #c4aca5;" >
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" >
+		<span class="navbar-toggler-icon" > </span >
+	</button >
+		<div class="collapse navbar-collapse" id="navbarNavAltMarkup" >
+		<div class="navbar-nav" >
+		<a class="nav-item nav-link active" href="~/Home/Index" > Home <span class="sr-only" > (current)</span > </a >
+	</div >
+	</div >
+	</nav >
+		<div class="container" style="background-color: #e1d6cf">
+			<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+			<h2> <u> <b>F A Q</b></u></h2>
+			<h4>Can't find the answers that you are looking for? Don't worry! 
+			Here are our most frequently asked questions to help you.</h4>
+
+			<button class="accordion">What payment methods do you accept? </button>
+			<div class="panel">
+				<p>
+					It depends on the shop that you are buying from.
+					Currently, for BADDIE MANILA, they accept COD only for on hand items but for pre-order items,
+					they accept full payment. For Flour Girl Co. they accept full payment via GCASH.
+				</p>
+			</div>
+
+			<button class="accordion"> How do we contact customer services?</button>
+			<div class="panel">
+				<p> You can go to our "Contact Us" page and enter your concern/s there.</p>
+				<p>	You can directly message the IG Shop.</p>
+			</div>
+
+			<button class="accordion"> Can we have our own choice of courier for shipping? </button>
+			<div class="panel">
+				<p>
+					Sorry but no. We have our own personal courier to handle all
+					the items, it would be easier for us to track your purchases.
+				</p>
+			</div>
+
+			<button class="accordion">
+				How do we ensure that a percentage from the items we bought online has been donated properly?
+			</button>
+			<div class="panel">
+				<p>
+					We will update the page constantly once the company/brand 
+					you've bought your items from has provided us with their 
+					transparency report and pictures.
+				</p>
+			</div>
+
+			<script>
+				var acc = document.getElementsByClassName("accordion");
+				var i;
+
+				for (i = 0; i < acc.length; i++) {
+					acc[i].addEventListener("click", function () {
+						this.classList.toggle("active");
+						var panel = this.nextElementSibling;
+						if (panel.style.maxHeight) {
+							panel.style.maxHeight = null;
+						} else {
+							panel.style.maxHeight = panel.scrollHeight + "px";
+						}
+					});
+				}
+
+			</script>
+
+</body >
+	</html >
