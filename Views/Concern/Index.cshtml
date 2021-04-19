@@ -26,9 +26,16 @@
 		</div>
 	</nav>
 	
-		<center>
+	<center>
+		
+			@if (ViewBag.Message != null)
+			{
+				<div class="alert alert-success">
+					@ViewBag.Message
+				</div>
+			}
 			<h1>Thank you for submitting your concern/s!</h1>
-		</center>
+	</center>
 	</body>
 </html>
 

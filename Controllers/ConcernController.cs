@@ -26,6 +26,7 @@ namespace ProjectCare01.Controllers
         {
             return View();
         }
+
         [HttpPost]
         public IActionResult Create(Concern record)
         {
