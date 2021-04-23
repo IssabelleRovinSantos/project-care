@@ -84,5 +84,11 @@ namespace ProjectCare01.Controllers
             return RedirectToAction("Index");
         }
 
+        public IActionResult Receipt()
+        {
+            var list = _context.Orders.ToList();
+            return View(list);
+        }
+
     }
 }
